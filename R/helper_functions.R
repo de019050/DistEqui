@@ -1,4 +1,4 @@
-#' Z scaling
+#' Z-scaling
 #'
 #' @param data frame
 #' @param charge_col name of col
@@ -21,3 +21,4 @@ scale_per_charge <- function(data, charge_col, cols_to_scale) {
     dplyr::mutate(across(all_of(cols_to_scale), z_scale, .names = "Z_{.col}")) %>%
     dplyr::ungroup()
 }
+
